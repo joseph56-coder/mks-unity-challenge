@@ -12,7 +12,7 @@ Desenvolva **one** um dos seguintes projetos:
 2. Match3 game (tipo um candy crush, apenas um nível)
 3. Flappy bird
 
-Se quiser, seja creativo e adicionei ferramentas que um usuário ache útil.
+Atente-se primariamente na funcionalidade, a parte visual pouco interessa nesse teste.
 
 Entrega
 ---------------
