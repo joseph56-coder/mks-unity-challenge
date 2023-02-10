@@ -62,8 +62,8 @@ Uma ou mais ilhas que parem o player e os barcos inimigos.
 <b>Menu Principal</b>
 --------------
 
-1. No menu principal, haverá duas opções: "Jogar" e "Configurações".
-2. Dentro do menu de configurações, haverá duas opções: "Duração da partida" e "Tempo de spawn dos inimigos".
+1. No menu principal, haverá duas opções: <b>"Jogar"</b> e <b>"Configurações"</b>.
+2. Dentro do menu de configurações, haverá duas opções: <b>"Duração da partida"</b> e <b>"Tempo de spawn dos inimigos"</b>.
 
 <b>Recursos</b>
 --------------
