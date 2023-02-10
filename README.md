@@ -19,12 +19,13 @@ Para esse desafio, você deve desenvolver um **Top-Down Shooter** sobre piratas.
 
 O player deve destruir outros barcos e sobreviver até a sessão do game acabar.
 
-<b><h5>Movimentação</h5></b>
+<b>Movimentação</b>
 
       1. Anda para a frente
       2. Rotaciona
 
 <b>Ataque:</b>
+
        1. Tiro único frontal
        2. Tiro triplo lateral (balas paralelas)
 	   
@@ -35,12 +36,13 @@ O player deve destruir outros barcos e sobreviver até a sessão do game acabar.
 
 Existem <b>dois</b> tipos de inimigos, o <b>Chaser</b> e o <b>Shooter</b>. As diferenças deles serão listadas na sessão <b>Ataque</b>.
 
-<b><h5>Movimentação</h5></b>
+<b>Movimentação</b>
 
       1. Anda para a frente
       2. Rotaciona
 
 <b>Ataque:</b>
+
        1. O "Shooter" vai atirar no Player quando chegar perto dele.
        2. O "Chaser" vai perseguir o Player para tentar acertá-lo com o próprio barco. Ele deve explodir quando acertar o Player.
 	   
