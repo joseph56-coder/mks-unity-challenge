@@ -24,7 +24,7 @@ O player deve destruir outros barcos e sobreviver até a sessão do game acabar.
       1. Anda para a frente
       2. Rotaciona
 
-<b>Ataque:</b>
+<b>Ataque</b>
 
        1. Tiro único frontal
        2. Tiro triplo lateral (balas paralelas)
@@ -41,10 +41,10 @@ Existem <b>dois</b> tipos de inimigos, o <b>Chaser</b> e o <b>Shooter</b>. As di
       1. Anda para a frente
       2. Rotaciona
 
-<b>Ataque:</b>
+<b>Ataque</b>
 
-       1. O "Shooter" vai atirar no Player quando chegar perto dele.
-       2. O "Chaser" vai perseguir o Player para tentar acertá-lo com o próprio barco. Ele deve explodir quando acertar o Player.
+      1. O "Shooter" vai atirar no Player quando chegar perto dele.
+      2. O "Chaser" vai perseguir o Player para tentar acertá-lo com o próprio barco. Ele deve explodir quando acertar o Player.
 	   
 	   
 <b>Obstáculos</b>
