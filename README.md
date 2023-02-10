@@ -1,7 +1,7 @@
 Diretrizes do desafio
 ---------------
 
-O objetivo principal desse teste é avaliar suas habilidades em POO (Programação orientada a objetos) juntamente com o Unity. Ao terminar, faça o deploy da aplicação e mande-nos o link.
+O objetivo principal desse teste é avaliar suas habilidades em POO (Programação orientada a objetos) juntamente com o Unity. Ao terminar, faça o deploy da aplicação (web) e mande-nos o link.
 
 Tarefa (funcional)
 ---------------
