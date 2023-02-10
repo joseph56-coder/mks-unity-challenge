@@ -73,7 +73,7 @@ Download dos assets: [Pirate Game Assets](https://mks-sistemas.nyc3.digitalocean
 <b>Aspectos técnicos</b>
 --------------
 
-Todo o código deve ser escritos pelo candidato e deve ser feito em inglês. Enquanto aos assets, estes podem ser de qualquer autor.
+Todo o código deve ser escritos pelo candidato, enquanto aos assets, estes podem ser de qualquer autor.
 
 
 Entrega
