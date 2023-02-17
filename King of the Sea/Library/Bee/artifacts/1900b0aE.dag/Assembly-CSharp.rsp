@@ -372,6 +372,15 @@
 "Assets/Scripts/Boat_Mover.cs"
 "Assets/Scripts/Cannon.cs"
 "Assets/Scripts/Damage.cs"
+"Assets/Scripts/DestroyUtil.cs"
+"Assets/Scripts/DestryIfDisable.cs"
+"Assets/Scripts/IA/AIBehaviour.cs"
+"Assets/Scripts/IA/AIDetector.cs"
+"Assets/Scripts/IA/AIPatrol.cs"
+"Assets/Scripts/IA/DefaultEnemyAI.cs"
+"Assets/Scripts/IA/IAPatrolPathBehaviours.cs"
+"Assets/Scripts/IA/PatrolPath.cs"
+"Assets/Scripts/ObjectPool.cs"
 "Assets/Scripts/Player_Moviment.cs"
 -langversion:9.0
 

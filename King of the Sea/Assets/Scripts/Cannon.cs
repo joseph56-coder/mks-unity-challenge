@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(ObjectPool))]
 public class Cannon : MonoBehaviour
 {
     // public List<Transform> cannons;
@@ -12,9 +13,19 @@ public class Cannon : MonoBehaviour
     private Collider2D[] boatCollider;
     private float currentDelay = 0;
 
+    private ObjectPool ballsPool;
+    [SerializeField]
+    private int ballsPoolCount = 10;
+
     void Awake()
     {
         boatCollider = GetComponentsInParent<Collider2D>();
+        ballsPool = GetComponent<ObjectPool>();
+    }
+
+    private void Start()
+    {
+        ballsPool.Initialize(ballPrefabs, ballsPoolCount);
     }
 
     void Update()
@@ -37,7 +48,8 @@ public class Cannon : MonoBehaviour
 
             foreach (var cannon in cannons)
             {
-                GameObject balls = Instantiate(ballPrefabs);
+                //GameObject balls = Instantiate(ballPrefabs);
+                GameObject balls = ballsPool.CreateObject();
                 balls.transform.position = cannon.position;
                 balls.transform.localRotation = cannon.rotation;
                 balls.GetComponent<Balls>().Initialize();

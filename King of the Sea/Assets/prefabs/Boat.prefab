@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 3284944248046589834}
   - component: {fileID: 3284944248046589846}
   - component: {fileID: 3284944248046589844}
+  - component: {fileID: 5717204799370141335}
   m_Layer: 0
   m_Name: Boat
   m_TagString: Untagged
@@ -138,15 +139,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 3
   render: {fileID: 0}
-  sprite: {fileID: 0}
+  sprite:
+  - {fileID: 0}
+  xplosion: {fileID: 0}
   health: 0
   OnDead:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3284944248046589835}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 5717204799370141335}
+        m_TargetAssemblyTypeName: DestroyUtil, Assembly-CSharp
+        m_MethodName: DestryHelper
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -161,6 +164,18 @@ MonoBehaviour:
   OnHit:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5717204799370141335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3284944248046589835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85f51830560bcd348a55444d6172be78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3284944248368956669
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,6 +188,7 @@ GameObject:
   - component: {fileID: 3284944248368956668}
   - component: {fileID: 3284944248368956666}
   - component: {fileID: 3284944248368956665}
+  - component: {fileID: 8168344220540704539}
   m_Layer: 0
   m_Name: Boat_Body
   m_TagString: Untagged
@@ -280,6 +296,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballPrefabs: {fileID: 2222429450058570491, guid: eca728cd07840a4419692f0fb12fd4ae, type: 3}
   reloadDelay: 3
+  ballsPoolCount: 10
+--- !u!114 &8168344220540704539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3284944248368956669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02377e2989b146647a3ea2db44a75f6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToPool: {fileID: 0}
+  poolSize: 10
+  spawnedObjectsParent: {fileID: 0}
 --- !u!1 &3284944249296627219
 GameObject:
   m_ObjectHideFlags: 0
