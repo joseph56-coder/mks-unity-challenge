@@ -50,6 +50,8 @@ public class Boat_Mover : MonoBehaviour
         currentSpeed = Math.Clamp(currentSpeed, 0, maxSpeed);
     }
 
+
+
     void FixedUpdate()
     {
         rbd.velocity = (Vector2)transform.up * currentSpeed * currentForwardSpeed * Time.fixedDeltaTime;

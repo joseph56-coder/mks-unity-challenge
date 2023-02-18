@@ -15,7 +15,7 @@ C:/Users/Joseph/Documents/GitHub/mks-unity-challenge/King of the Sea
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54437
+53042
 Successfully changed project path to: C:/Users/Joseph/Documents/GitHub/mks-unity-challenge/King of the Sea
 C:/Users/Joseph/Documents/GitHub/mks-unity-challenge/King of the Sea
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/Joseph/Documents/GitHub/mks-unity-challenge/King of the Sea
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [7804] Host "[IP] 26.38.248.98 [Port] 0 [Flags] 2 [Guid] 2254896877 [EditorId] 2254896877 [Version] 1048832 [Id] WindowsEditor(7,Joseph-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [6264] Host "[IP] 26.38.248.98 [Port] 0 [Flags] 2 [Guid] 3273355709 [EditorId] 3273355709 [Version] 1048832 [Id] WindowsEditor(7,Joseph-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [7804] Host "[IP] 26.38.248.98 [Port] 0 [Flags] 2 [Guid] 2254896877 [EditorId] 2254896877 [Version] 1048832 [Id] WindowsEditor(7,Joseph-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [6264] Host "[IP] 26.38.248.98 [Port] 0 [Flags] 2 [Guid] 3273355709 [EditorId] 3273355709 [Version] 1048832 [Id] WindowsEditor(7,Joseph-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 1830.56 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1074.12 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.18f1 (3129e69bc0c7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -65,3 +65,46 @@ Direct3D:
     Vendor:   ATI
     VRAM:     999 MB
     Driver:   15.200.1062.1004
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56552
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.088891 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 392.65 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  7.241 seconds
+Domain Reload Profiling:
+	ReloadAssembly (7243ms)
+		BeginReloadAssembly (4764ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (3ms)
+		EndReloadAssembly (1872ms)
+			LoadAssemblies (4752ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (412ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (110ms)
+			SetupLoadedEditorAssemblies (1117ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (24ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (393ms)
+				BeforeProcessingInitializeOnLoad (4ms)
+				ProcessInitializeOnLoadAttributes (470ms)
+				ProcessInitializeOnLoadMethodAttributes (225ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.318577 seconds.

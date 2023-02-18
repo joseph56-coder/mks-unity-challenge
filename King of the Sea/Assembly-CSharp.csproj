@@ -36,21 +36,24 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\IA\PatrolPath.cs" />
      <Compile Include="Assets\Scripts\Boat_Controller.cs" />
      <Compile Include="Assets\Scripts\Player_Moviment.cs" />
-     <Compile Include="Assets\Scripts\Boat_Mover.cs" />
-     <Compile Include="Assets\Scripts\Damage.cs" />
-     <Compile Include="Assets\Scripts\Balls.cs" />
-     <Compile Include="Assets\Scripts\Cannon.cs" />
-     <Compile Include="Assets\Scripts\ObjectPool.cs" />
-     <Compile Include="Assets\Scripts\DestroyUtil.cs" />
-     <Compile Include="Assets\Scripts\DestryIfDisable.cs" />
-     <Compile Include="Assets\Scripts\IA\AIDetector.cs" />
      <Compile Include="Assets\Scripts\IA\DefaultEnemyAI.cs" />
      <Compile Include="Assets\Scripts\IA\AIBehaviour.cs" />
-     <Compile Include="Assets\Scripts\IA\AIPatrol.cs" />
-     <Compile Include="Assets\Scripts\IA\PatrolPath.cs" />
+     <Compile Include="Assets\Scripts\Boat_Mover.cs" />
+     <Compile Include="Assets\Scripts\Damage.cs" />
+     <Compile Include="Assets\Scripts\IA\AIDetector.cs" />
+     <Compile Include="Assets\Scripts\Balls.cs" />
+     <Compile Include="Assets\Scripts\Cannon.cs" />
+     <Compile Include="Assets\Scripts\DestroyUtil.cs" />
+     <Compile Include="Assets\Scripts\DestryIfDisable.cs" />
+     <Compile Include="Assets\Scripts\ObjectPool.cs" />
      <Compile Include="Assets\Scripts\IA\IAPatrolPathBehaviours.cs" />
+     <Compile Include="Assets\Scripts\IA\AIShootBehaviours.cs" />
+     <Compile Include="Assets\Scripts\IA\RotateBoatEnemy.cs" />
+     <Compile Include="Assets\Scripts\IA\AIFollower.cs" />
+     <Compile Include="Assets\Scripts\IA\Follow.cs" />
      <None Include="Assets\Spritesheet\shipsMiscellaneous_sheet@2.xml" />
      <None Include="Assets\Spritesheet\shipsMiscellaneous_sheet.xml" />
      <None Include="Assets\Tilesheet\tilesheets.txt" />
