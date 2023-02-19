@@ -11,7 +11,7 @@ public class Boat_Controller : MonoBehaviour
     public Follow follow;
 
 
-    public List<Transform> Front_cannons, Edge_Left_cannons;
+    public List<Transform> Front_cannons, Edge_Left_cannons, Edge_Right_cannons;
 
     void Awake()
     {
@@ -36,6 +36,11 @@ public class Boat_Controller : MonoBehaviour
     public void EdgeLeftShooter()
     {
         Cannon.shoot(Edge_Left_cannons);
+    }
+
+     public void EdgeRightShooter()
+    {
+        Cannon.shoot(Edge_Right_cannons);
     }
 
     public void HandleMoveBody(Vector2 movementVector)

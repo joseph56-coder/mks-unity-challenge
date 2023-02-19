@@ -374,6 +374,7 @@
 "Assets/Scripts/Damage.cs"
 "Assets/Scripts/DestroyUtil.cs"
 "Assets/Scripts/DestryIfDisable.cs"
+"Assets/Scripts/GameManeger.cs"
 "Assets/Scripts/IA/AIBehaviour.cs"
 "Assets/Scripts/IA/AIDetector.cs"
 "Assets/Scripts/IA/AIFollower.cs"
@@ -385,6 +386,7 @@
 "Assets/Scripts/IA/RotateBoatEnemy.cs"
 "Assets/Scripts/ObjectPool.cs"
 "Assets/Scripts/Player_Moviment.cs"
+"Assets/Scripts/RandomSpawner.cs"
 -langversion:9.0
 
 /deterministic

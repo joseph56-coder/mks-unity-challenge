@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,34 +35,18 @@ public class AIFollower : AIBehaviour
         return false;
     }
 
-    // private void OnTriggerEnter2D(Collider2D collision)
-    // {
-    //     Debug.Log(collision.gameObject.tag);
-    //     if (collision.gameObject.tag == "Player")
-    //     {
-    //         Debug.Log("acertei");
-    //         var damagable = collision.GetComponent<Damage>();
-    //         if (damagable != null)
-    //         {
-    //             damagable.Hit(damage);
-    //         }
-    //         gameObject.SetActive(false);
-    //     }
-    // }
-
-    private void OnCollisionEnter(Collision collision) 
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject.tag);
-        Debug.Log("acertei");
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.tag == "Player")
         {
             Debug.Log("acertei");
-            var damagable = collision.gameObject.GetComponent<Damage>();
+            var damagable = collision.transform.GetComponent<Damage>();
             if (damagable != null)
             {
                 damagable.Hit(damage);
+                Destroy(transform.parent.gameObject);
             }
-            gameObject.SetActive(false);
         }
     }
 }

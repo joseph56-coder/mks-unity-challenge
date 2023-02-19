@@ -11,16 +11,18 @@ public class AIShootBehaviours : AIBehaviour
     {
         if (TargetInFOV(boat, detector))
         {
-            boat.HandleMoveBody(Vector2.zero);
             boat.FrontShooter();
+            Debug.Log("atirar");
+            boat.HandleMoveBody(Vector2.zero);
         }
-        boat.HandleBoatTurn(detector.Target);
+            boat.HandleBoatTurn(detector.Target);
+        
     }
 
     private bool TargetInFOV(Boat_Controller boat, AIDetector detector)
     {
         var direction = detector.Target.position - boat.Rotate.transform.position;
-        if (Vector2.Angle(boat.Rotate.transform.right, direction) < fieldOfVisionForShooting / 2)
+        if (Vector2.Angle(boat.Rotate.transform.up, direction) < fieldOfVisionForShooting / 2)
         {
             return true;
         }

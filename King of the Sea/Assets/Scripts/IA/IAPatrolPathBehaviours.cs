@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class IAPatrolPathBehaviours : AIBehaviour
 {
-   public PatrolPath patrolPath;
+    private GameObject hand;
+    public PatrolPath patrolPath;
    [Range (0.1f, 1)]
    public float arriveDistance = 1;
    public float waitTime = 0.5f;
@@ -20,7 +21,8 @@ public class IAPatrolPathBehaviours : AIBehaviour
    private void Awake() {
     if (patrolPath == null)
     {
-        patrolPath = GetComponentInChildren<PatrolPath>();
+        hand = GameObject.Find("path");
+        patrolPath = hand.GetComponent<PatrolPath>();
     }
    }
 

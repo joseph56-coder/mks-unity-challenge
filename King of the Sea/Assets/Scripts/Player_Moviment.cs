@@ -8,6 +8,7 @@ public class Player_Moviment : MonoBehaviour
 {
     public UnityEvent OnFrontShooter = new UnityEvent();
     public UnityEvent OnLeftShooter = new UnityEvent();
+    public UnityEvent OnRightShooter = new UnityEvent();
     public UnityEvent<Vector2> OnMovement = new UnityEvent<Vector2>();
 
     // Update is called once per frame
@@ -23,10 +24,13 @@ public class Player_Moviment : MonoBehaviour
         {
             OnFrontShooter?.Invoke();
         }
-
         if (Input.GetKeyDown(KeyCode.J))
         {
             OnLeftShooter?.Invoke();
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            OnRightShooter?.Invoke();
         }
     }
 
