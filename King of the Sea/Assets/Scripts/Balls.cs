@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Balls : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Balls : MonoBehaviour
     private float conquareDistance = 0;
     private Rigidbody2D rbd;
 
+    public UnityEvent OnHit = new UnityEvent();
     void Awake()
     {
         rbd = GetComponent<Rigidbody2D>();
@@ -43,6 +45,7 @@ public class Balls : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("acertei");
+        OnHit?.Invoke();
         var damagable = collision.GetComponent<Damage>();
         if (damagable != null)
         {

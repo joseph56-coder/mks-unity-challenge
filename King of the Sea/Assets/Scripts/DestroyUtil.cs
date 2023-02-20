@@ -23,11 +23,21 @@ public class DestroyUtil : MonoBehaviour
         Destroy(transform.parent.gameObject);
     }
 
+    public void destryBulletHelper()
+    {
+        Destroy(transform.gameObject);
+    }
+
     public void DestryplayerHelper()
+    {
+        GameOver();
+        Destroy(transform.parent.gameObject);
+    }
+
+    public void GameOver()
     {
         scoreText.text = "HighScore: " + gameManeger.score;
         gameOver.SetActive(true);
         Time.timeScale = 0;
-        Destroy(transform.parent.gameObject);
     }
 }
