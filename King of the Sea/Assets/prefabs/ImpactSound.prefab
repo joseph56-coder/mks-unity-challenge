@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1377131385745717947}
   - component: {fileID: 7099076384695213111}
+  - component: {fileID: 1246959294572435086}
   m_Layer: 0
   m_Name: ImpactSound
   m_TagString: Untagged
@@ -42,9 +43,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: bd9fecc98a49cdc49ae4034dae28fb6d, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b12fc075a3ca06e44afa82c61416514d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -128,3 +129,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1246959294572435086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8726993576081041233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d409687172e64d488e5193968c2da2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

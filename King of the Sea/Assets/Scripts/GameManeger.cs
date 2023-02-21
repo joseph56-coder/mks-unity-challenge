@@ -15,6 +15,10 @@ public class GameManeger : MonoBehaviour
     private void Start()
     {
         timeIsRunning = true;
+        if (PlayerPrefs.HasKey("Time"))
+        {
+            time = PlayerPrefs.GetFloat("Time");
+        }
     }
 
     void Update()

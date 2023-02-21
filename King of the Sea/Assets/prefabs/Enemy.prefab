@@ -371,7 +371,7 @@ Transform:
   m_GameObject: {fileID: 7002091668199056809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7002091668380006083}
@@ -417,8 +417,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1014364677
   m_SortingLayer: 3
-  m_SortingOrder: 1
-  m_Sprite: {fileID: -927529872, guid: 78e1feda5f8bec34a94c5477bda10d0c, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 5f255ce2c32c7ef4db9e3d19c81e347b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
@@ -493,6 +493,7 @@ GameObject:
   - component: {fileID: 7002091668380006080}
   - component: {fileID: 283037781760491459}
   - component: {fileID: 5528760240963386238}
+  - component: {fileID: 4121455105461930403}
   m_Layer: 6
   m_Name: Enemy_Boat
   m_TagString: Untagged
@@ -589,10 +590,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 2
-  render: {fileID: 7002091668199056808}
-  sprite:
-  - {fileID: 186751148, guid: 78e1feda5f8bec34a94c5477bda10d0c, type: 3}
-  xplosion: {fileID: 1931808924, guid: 78e1feda5f8bec34a94c5477bda10d0c, type: 3}
   health: 0
   OnDead:
     m_PersistentCalls:
@@ -626,7 +623,19 @@ MonoBehaviour:
         m_CallState: 2
   OnHit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4121455105461930403}
+        m_TargetAssemblyTypeName: HitPlayer, Assembly-CSharp
+        m_MethodName: OnHitBoatEnemy
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &283037781760491459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,6 +664,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 5
+--- !u!114 &4121455105461930403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7002091668380006111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79909e0f3d2ed04a83bc055e12a0ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  render: {fileID: 7002091668199056808}
+  sprite:
+  - {fileID: 21300000, guid: 811d0a341706e7847877cd20c4e4f5f6, type: 3}
+  xplosion: {fileID: 1468661109, guid: 78e1feda5f8bec34a94c5477bda10d0c, type: 3}
 --- !u!1 &7002091669037821550
 GameObject:
   m_ObjectHideFlags: 0

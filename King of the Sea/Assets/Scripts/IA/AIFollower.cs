@@ -9,6 +9,9 @@ public class AIFollower : AIBehaviour
     // public Collider2D groundCollider;
     public int damage = 1;
     public float fieldOfVisionForFollowing = 60;
+    public SpriteRenderer render;
+    public Sprite xplosion;
+    public AudioSource audioSource;
     public override void PerformDetection(Boat_Controller boat, AIDetector detector)
     {
         if (TargetInFOV(boat, detector))
@@ -45,8 +48,16 @@ public class AIFollower : AIBehaviour
             if (damagable != null)
             {
                 damagable.Hit(damage);
-                Destroy(transform.parent.gameObject);
+                StartCoroutine(DamageBoat());
             }
         }
+    }
+
+     private IEnumerator DamageBoat()
+    {
+        render.sprite = xplosion;
+        audioSource.Play();
+        yield return new WaitForSeconds(0.3f);
+        Destroy(transform.parent.gameObject);
     }
 }
