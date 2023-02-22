@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\Utils\Balls.cs" />
      <Compile Include="Assets\Scripts\Utils\ObjectGeneratorRandomPositionUtil.cs" />
      <Compile Include="Assets\Scripts\IA\AIFollower.cs" />
+     <Compile Include="Assets\Scripts\Boats\HitPlayer.cs" />
      <Compile Include="Assets\Scripts\Boats\Cannon.cs" />
      <Compile Include="Assets\Scripts\GameManeger.cs" />
      <Compile Include="Assets\Scripts\Utils\DestroyUtil.cs" />
@@ -59,9 +60,8 @@
      <Compile Include="Assets\Scripts\Utils\ObjectPool.cs" />
      <Compile Include="Assets\Scripts\Utils\RandomSpawner.cs" />
      <Compile Include="Assets\Scripts\IA\IAPatrolPathBehaviours.cs" />
-     <Compile Include="Assets\Scripts\Utils\DestroyOnAudioEnd.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
-     <Compile Include="Assets\Scripts\Boats\HitPlayer.cs" />
+     <Compile Include="Assets\Scripts\Utils\DestroyOnAudioEnd.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

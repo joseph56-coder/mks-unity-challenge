@@ -54,7 +54,7 @@ public class Menu : MonoBehaviour
 
     public void play()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadSceneAsync("Game");
     }
 
     public void MainMenu()
@@ -65,5 +65,22 @@ public class Menu : MonoBehaviour
     public void Reload()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Fulllscreen(bool isFullScreen)
+    {
+        if (isFullScreen)
+        {
+            Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+        }
+        else
+        {
+            Screen.fullScreenMode = FullScreenMode.Windowed;
+        }
+    }
+
+    public void closeGame()
+    {
+        Application.Quit();
     }
 }

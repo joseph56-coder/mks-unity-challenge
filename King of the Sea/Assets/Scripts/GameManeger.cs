@@ -14,10 +14,15 @@ public class GameManeger : MonoBehaviour
     public DestroyUtil destroyUtil;
     private void Start()
     {
+        Time.timeScale = 1;
         timeIsRunning = true;
         if (PlayerPrefs.HasKey("Time"))
         {
             time = PlayerPrefs.GetFloat("Time");
+        }
+        else
+        {
+            time = 60;
         }
     }
 

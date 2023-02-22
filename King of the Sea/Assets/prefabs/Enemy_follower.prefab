@@ -673,7 +673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66bde53cffa16574aaf81bf4a939035d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadious: 4.4
+  viewRadious: 6.5
   detectionCheckDelay: 0.1
   target: {fileID: 0}
   playerLayerMask:
