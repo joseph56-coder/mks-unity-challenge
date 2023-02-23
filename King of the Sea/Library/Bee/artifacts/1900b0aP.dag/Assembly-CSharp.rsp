@@ -331,6 +331,8 @@
 "Assets/Scripts/IA/PatrolPath.cs"
 "Assets/Scripts/IA/RotateBoatEnemy.cs"
 "Assets/Scripts/Menu.cs"
+"Assets/Scripts/Pause.cs"
+"Assets/Scripts/SceneLoaderScreen.cs"
 "Assets/Scripts/Utils/Balls.cs"
 "Assets/Scripts/Utils/Damage.cs"
 "Assets/Scripts/Utils/DestroyOnAudioEnd.cs"

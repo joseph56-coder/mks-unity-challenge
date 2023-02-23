@@ -5,11 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public GameObject config;
+    //instanciando objeto
+    public GameObject config, creditos;
     void Start()
     {
+        Time.timeScale = 1;
+        //impedindo a tela de configuracoes ficar visivel quando inicia
         config.SetActive(false);
     }
+
+    //setando o tempo de jogo
     public void TimeDropDown(int val)
     {
         if (val == 0)
@@ -26,6 +31,7 @@ public class Menu : MonoBehaviour
         }
     }
 
+    //setando o tempo de spawn
     public void SpawnTimeDropDown(int val)
     {
         if (val == 0)
@@ -42,31 +48,43 @@ public class Menu : MonoBehaviour
         }
     }
 
+    //para fechar a aba configuraçoes
     public void close()
     {
         config.SetActive(false);
     }
 
+    //para abrir a aba configuraçoes
     public void open()
     {
         config.SetActive(true);
     }
 
-    public void play()
+    //abrir Tela Creditos
+    public void Creditos()
     {
-        SceneManager.LoadSceneAsync("Game");
+       creditos.SetActive(true);
     }
 
+    //fechar tela creditos
+    public void FecharCreditos()
+    {
+       creditos.SetActive(false);
+    }
+
+    //voltar para o menu principal na tela de game over
     public void MainMenu()
     {
-        SceneManager.LoadScene("Menu_Principal");
+        SceneManager.LoadScene("Menu_Principal", LoadSceneMode.Single);
     }
 
+    //reiniciar o jogo
     public void Reload()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
 
+    //mudar de tela cheia para modo janela
     public void Fulllscreen(bool isFullScreen)
     {
         if (isFullScreen)
@@ -79,6 +97,7 @@ public class Menu : MonoBehaviour
         }
     }
 
+    //fechar jogo
     public void closeGame()
     {
         Application.Quit();

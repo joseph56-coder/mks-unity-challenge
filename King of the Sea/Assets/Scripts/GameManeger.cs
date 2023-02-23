@@ -5,6 +5,7 @@ using TMPro;
 
 public class GameManeger : MonoBehaviour
 {
+    //instanciando objeto
     public int score;
 
     public float time = 100;
@@ -14,8 +15,10 @@ public class GameManeger : MonoBehaviour
     public DestroyUtil destroyUtil;
     private void Start()
     {
+        // impedindo de quando reiniciar ele ficar com oo jogo parad
         Time.timeScale = 1;
         timeIsRunning = true;
+        //impedindo de se o tempo nao for selecionado ele colocar como padrao 1 minuto
         if (PlayerPrefs.HasKey("Time"))
         {
             time = PlayerPrefs.GetFloat("Time");
@@ -26,9 +29,10 @@ public class GameManeger : MonoBehaviour
         }
     }
 
+    //verifica se o tempo acabou a cada frame, se acabou ele manda a tela de game over
     void Update()
     {
-        if(timeIsRunning)
+        if (timeIsRunning)
         {
             if (time > 0)
             {
@@ -44,7 +48,7 @@ public class GameManeger : MonoBehaviour
             }
         }
     }
-
+    //setar o modo de display do tempo como um relogio normal
     void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;

@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class RotateBoatEnemy : MonoBehaviour
 {
-
+    //instanciando objeto
     public float rotationSpeed = 3f;
+
+    //rotaciona o barco inimigo
     public void Rotate(Transform pointerPosition)
     {
         var offset = 90;

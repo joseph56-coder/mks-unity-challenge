@@ -21,9 +21,11 @@ ScriptsOnlyBuild:
     - ObjectGeneratorRandomPositionUtil
     - ObjectPool
     - PatrolPath
+    - Pause
     - Player_Moviment
     - RandomSpawner
     - RotateBoatEnemy
+    - SceneLoaderScreen
     - UIFollow
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -124,7 +126,13 @@ ScriptsOnlyBuild:
   methodsToPreserve:
   - assembly: Assembly-CSharp
     fullTypeName: Menu
-    methodName: play
+    methodName: Creditos
+  - assembly: Assembly-CSharp
+    fullTypeName: Menu
+    methodName: FecharCreditos
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneLoaderScreen
+    methodName: LoadScene
   - assembly: Assembly-CSharp
     fullTypeName: Menu
     methodName: closeGame
@@ -144,29 +152,32 @@ ScriptsOnlyBuild:
     fullTypeName: Menu
     methodName: Fulllscreen
   - assembly: Assembly-CSharp
-    fullTypeName: DestroyUtil
-    methodName: DestryHelper
-  - assembly: UnityEngine.UI
-    fullTypeName: UnityEngine.UI.Slider
-    methodName: set_value
-  - assembly: Assembly-CSharp
-    fullTypeName: HitPlayer
-    methodName: OnHitBoatEnemy
-  - assembly: Assembly-CSharp
-    fullTypeName: DestroyUtil
-    methodName: DestryHelper
-  - assembly: UnityEngine.UI
-    fullTypeName: UnityEngine.UI.Slider
-    methodName: set_value
-  - assembly: Assembly-CSharp
-    fullTypeName: HitPlayer
-    methodName: OnHitBoatEnemy
-  - assembly: Assembly-CSharp
     fullTypeName: ObjectGeneratorRandomPositionUtil
     methodName: CreateObject
   - assembly: Assembly-CSharp
     fullTypeName: InstantiateUtil
     methodName: InstantiateObject
+  - assembly: Assembly-CSharp
+    fullTypeName: DestroyUtil
+    methodName: DestryHelper
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Slider
+    methodName: set_value
+  - assembly: Assembly-CSharp
+    fullTypeName: HitPlayer
+    methodName: OnHitBoatEnemy
+  - assembly: Assembly-CSharp
+    fullTypeName: DestroyUtil
+    methodName: DestryHelper
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Slider
+    methodName: set_value
+  - assembly: Assembly-CSharp
+    fullTypeName: HitPlayer
+    methodName: OnHitBoatEnemy
+  - assembly: Assembly-CSharp
+    fullTypeName: Menu
+    methodName: MainMenu
   - assembly: Assembly-CSharp
     fullTypeName: Boat_Controller
     methodName: FrontShooter
@@ -182,6 +193,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Menu
     methodName: MainMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: Pause
+    methodName: GameReturn
   - assembly: Assembly-CSharp
     fullTypeName: Menu
     methodName: Reload
@@ -298,6 +312,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8474}
     - Class: 114
       Script: {instanceID: 8548}
+    - Class: 114
+      Script: {instanceID: 49566}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -376,6 +392,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5520}
     - Class: 114
+      Script: {instanceID: 5578}
+    - Class: 114
       Script: {instanceID: 5670}
     - Class: 114
       Script: {instanceID: 6336}
@@ -389,6 +407,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8178}
     - Class: 114
       Script: {instanceID: 8474}
+    - Class: 114
+      Script: {instanceID: 54926}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1404,7 +1424,7 @@ ScriptsOnlyBuild:
     className: PixelPerfectCamera
   - hash:
       serializedVersion: 2
-      Hash: 0c19762a20768807197c74a22c098c8c
+      Hash: 4c6dca2e3469495398b21ad568882690
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Menu
@@ -1486,9 +1506,20 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 843953032fcf03e9eeb2a28d6f7816ff
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pause
+  - hash:
+      serializedVersion: 2
+      Hash: c86367a6803854ccf8ec51d77c77e2c9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneLoaderScreen
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu_Principal.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/Joseph/Documents/GitHub/mks-unity-challenge/King of the Sea
-    Game/King of the Sea.exe
+  playerPath: C:/Users/Joseph/Documents/GitHub/King of the Sea Game/King of the Sea.exe

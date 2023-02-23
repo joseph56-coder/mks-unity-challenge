@@ -5,13 +5,10 @@ using UnityEngine.Events;
 
 public class Damage : MonoBehaviour
 {
+    //instanciando objeto
     public int MaxHealth = 3;
-
     [SerializeField]
     private int health;
-
-
-
 
     public int Health
     {
@@ -32,6 +29,7 @@ public class Damage : MonoBehaviour
         Health = MaxHealth;
     }
 
+    //checa a vida do barco e se deve destruir ele ou continuar vivo
     internal void Hit(int damagePoints)
     {
         Health -= damagePoints;

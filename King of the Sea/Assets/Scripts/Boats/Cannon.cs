@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(ObjectPool))]
 public class Cannon : MonoBehaviour
 {
+    //instanciando objeto
     // public List<Transform> cannons;
     public GameObject ballPrefabs;
     public float reloadDelay = 3;
@@ -23,6 +24,7 @@ public class Cannon : MonoBehaviour
         ballsPool = GetComponent<ObjectPool>();
     }
 
+    //inicializa o script para limitar o numero de balas
     private void Start()
     {
         ballsPool.Initialize(ballPrefabs, ballsPoolCount);
@@ -30,6 +32,7 @@ public class Cannon : MonoBehaviour
 
     void Update()
     {
+        //verifica se pode atirar, senao, tera que esperar  delay para atirar denvo
         if (canShoot == false)
         {
             currentDelay -= Time.deltaTime;
@@ -39,6 +42,7 @@ public class Cannon : MonoBehaviour
             }
         }
     }
+    // faz o barco atirar e nao atingir seu collider
     public void shoot(List<Transform> cannons)
     {
         if (canShoot)

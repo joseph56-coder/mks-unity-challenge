@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class HitPlayer : MonoBehaviour
 {
+    //instanciando objeto
     public SpriteRenderer render;
     public Sprite[] sprite;
     public Sprite xplosion;
     private int spriteNumber = 0;
 
+    //se player for atingido, muda o sprite baseado na vida
     public void OnHitBoatPlayer(int health)
     {
-         if (health == 4)
+        if (health == 4)
         {
             StartCoroutine(DamageBoat());
         }
@@ -22,6 +24,7 @@ public class HitPlayer : MonoBehaviour
         }
     }
 
+    //se inimigo for atingido, muda o sprite baseado na vida
     public void OnHitBoatEnemy(int health)
     {
         if (health == 1)
@@ -29,6 +32,7 @@ public class HitPlayer : MonoBehaviour
             StartCoroutine(DamageBoat());
         }
     }
+    //muda para um sprite de explosao antes de mudar para o novo sprite
     private IEnumerator DamageBoat()
     {
         render.sprite = xplosion;

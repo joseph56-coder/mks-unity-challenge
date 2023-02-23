@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AIDetector : MonoBehaviour
 {
+    //instanciando objeto
     [Range(1, 15)]
     [SerializeField]
     private float viewRadious = 11;
@@ -18,7 +19,7 @@ public class AIDetector : MonoBehaviour
     private LayerMask visibilityPlayer;
 
     [field: SerializeField]
-    public bool TargetVisiible {get;private set;}
+    public bool TargetVisiible { get; private set; }
 
     public Transform Target
     {
@@ -30,12 +31,15 @@ public class AIDetector : MonoBehaviour
         }
     }
 
-    private void Start() 
+    //ativa a rotina de deteccao
+    private void Start()
     {
         StartCoroutine(DetectionCoroutine());
     }
 
-    private void Update() 
+    // verifica a cada frame se o alvo nao e nulo
+    // se nao for, seta a visibilidade do alvo como true
+    private void Update()
     {
         if (Target != null)
         {
@@ -44,6 +48,7 @@ public class AIDetector : MonoBehaviour
         }
     }
 
+    //verifica se o alvo e visivel e retorna true ou false
     private bool CheckTargetVisible()
     {
         var result = Physics2D.Raycast(transform.position, Target.position - transform.position, viewRadious,
@@ -55,18 +60,20 @@ public class AIDetector : MonoBehaviour
         return false;
     }
 
+    //chama os metodos para saber se o player esta no  alcance ou nao
     private void DetectionTarget()
     {
         if (Target == null)
         {
             CheckIfPlayerInRange();
         }
-        else if(Target != null)
+        else if (Target != null)
         {
             DetectIfOutOfRange();
         }
     }
 
+    // se tiver ele pega o transform dele
     private void CheckIfPlayerInRange()
     {
         Collider2D collision = Physics2D.OverlapCircle(transform.position, viewRadious, playerLayerMask);
@@ -76,6 +83,7 @@ public class AIDetector : MonoBehaviour
         }
     }
 
+    //se nao tiver, seta o alvo como nulo
     private void DetectIfOutOfRange()
     {
         if (Target == null || Target.gameObject.activeSelf == false || Vector2.Distance(transform.position,
@@ -83,9 +91,10 @@ public class AIDetector : MonoBehaviour
         {
             Target = null;
         }
-        
+
     }
 
+    //cria a corotina de deteccao
     IEnumerator DetectionCoroutine()
     {
         yield return new WaitForSeconds(detectionCheckDelay);
@@ -93,7 +102,8 @@ public class AIDetector : MonoBehaviour
         StartCoroutine(DetectionCoroutine());
     }
 
-    private void OnDrawGizmos() 
+    //desenha no modo editor o alcance da deteccao
+    private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, viewRadious);
     }

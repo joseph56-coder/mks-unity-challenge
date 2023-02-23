@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Boat_Mover : MonoBehaviour
 {
-
+    //instanciando objeto
     public Rigidbody2D rbd;
     private Vector2 movementVector;
     public float maxSpeed = 20f;
@@ -21,6 +21,7 @@ public class Boat_Mover : MonoBehaviour
         rbd = GetComponentInParent<Rigidbody2D>();
     }
 
+    // move o barco para frente e impede dele ir para tras
     public void Move(Vector2 movementVector)
     {
         this.movementVector = movementVector;
@@ -37,6 +38,7 @@ public class Boat_Mover : MonoBehaviour
         }
     }
 
+    //faz o barco acelerar de desacelerar
     private void CalculateSpeed(Vector2 movementVector)
     {
         if (Math.Abs(movementVector.y) > 0)
@@ -51,7 +53,7 @@ public class Boat_Mover : MonoBehaviour
     }
 
 
-
+    //faz o barco virar e se mover
     void FixedUpdate()
     {
         rbd.velocity = (Vector2)transform.up * currentSpeed * currentForwardSpeed * Time.fixedDeltaTime;

@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class Player_Moviment : MonoBehaviour
 {
+    //instanciando objeto
     public UnityEvent OnFrontShooter = new UnityEvent();
     public UnityEvent OnLeftShooter = new UnityEvent();
     public UnityEvent OnRightShooter = new UnityEvent();
@@ -18,6 +19,7 @@ public class Player_Moviment : MonoBehaviour
         GetShootingInput();
     }
 
+    //verifica se o player apertou algumas das teclas para atirar
     private void GetShootingInput()
     {
         if (Input.GetKeyDown(KeyCode.I))
@@ -34,6 +36,7 @@ public class Player_Moviment : MonoBehaviour
         }
     }
 
+    //verifica se  player apertou a tecla para se mover
     private void GetBodyMovement()
     {
         Vector2 movementVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));

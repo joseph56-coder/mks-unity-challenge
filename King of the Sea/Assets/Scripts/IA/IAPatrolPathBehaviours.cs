@@ -5,27 +5,32 @@ using UnityEngine;
 
 public class IAPatrolPathBehaviours : AIBehaviour
 {
+    //instanciando objeto
     private GameObject hand;
     public PatrolPath patrolPath;
-   [Range (0.1f, 1)]
-   public float arriveDistance = 1;
-   public float waitTime = 0.5f;
-   [SerializeField]
-   private bool isWaiting = false;
-   [SerializeField]
-   Vector2 currentPatrolTarget = Vector2.zero;
-   bool insInitialize = false;
+    [Range(0.1f, 1)]
+    public float arriveDistance = 1;
+    public float waitTime = 0.5f;
+    [SerializeField]
+    private bool isWaiting = false;
+    [SerializeField]
+    Vector2 currentPatrolTarget = Vector2.zero;
+    bool insInitialize = false;
 
-   private int currentIndex = -1;
+    private int currentIndex = -1;
 
-   private void Awake() {
-    if (patrolPath == null)
+    private void Awake()
     {
-        hand = GameObject.Find("path");
-        patrolPath = hand.GetComponent<PatrolPath>();
+        // verifica se o patrolpath e null
+        //se for, ele procura na scena a pega ele
+        if (patrolPath == null)
+        {
+            hand = GameObject.Find("path");
+            patrolPath = hand.GetComponent<PatrolPath>();
+        }
     }
-   }
 
+    //cuida de todo o movimento de ir para um ponto para o outro durante a patrulha
     public override void PerformDetection(Boat_Controller boat, AIDetector detector)
     {
         if (!isWaiting)
@@ -40,7 +45,7 @@ public class IAPatrolPathBehaviours : AIBehaviour
                 this.currentPatrolTarget = currentPathPoint.Position;
                 insInitialize = true;
             }
-            if (Vector2.Distance(boat.transform.position, currentPatrolTarget)< arriveDistance)
+            if (Vector2.Distance(boat.transform.position, currentPatrolTarget) < arriveDistance)
             {
                 isWaiting = true;
                 StartCoroutine(WaitCoroutine());
@@ -63,6 +68,7 @@ public class IAPatrolPathBehaviours : AIBehaviour
         }
     }
 
+    //rotina para esperar antes de ir para o proximo ponto
     IEnumerator WaitCoroutine()
     {
         yield return new WaitForSeconds(waitTime);

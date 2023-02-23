@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class Balls : MonoBehaviour
 {
+    //instanciando objeto
     public float speed = 10;
     public int damage = 1;
     public float maxDistance = 10;
@@ -21,12 +22,16 @@ public class Balls : MonoBehaviour
 
     }
 
+    //pegar a posicao iniciar e atira a bala para frente usando a velocidade setada
+
     public void Initialize()
     {
         startPosition = transform.position;
         rbd.velocity = transform.up * speed;
     }
 
+    //verifica se a distancia sem colidir em nada e maior ou igual a permitida
+    //se nao for, ele e desabilitado
     void Update()
     {
         conquareDistance = Vector2.Distance(transform.position, startPosition);
@@ -35,13 +40,14 @@ public class Balls : MonoBehaviour
             DisableObject();
         }
     }
-
+    //desabilita a bala
     private void DisableObject()
     {
         rbd.velocity = Vector2.zero;
         gameObject.SetActive(false);
     }
 
+    //verifica se atingiu algum barco, se nao, so desabilita
     void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("acertei");

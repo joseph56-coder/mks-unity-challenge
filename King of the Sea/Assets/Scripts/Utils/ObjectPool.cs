@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
+    //instanciando objeto
     [SerializeField]
     protected GameObject ObjectToPool;
 
@@ -20,12 +21,15 @@ public class ObjectPool : MonoBehaviour
         objectPool = new Queue<GameObject>();
     }
 
+    //Para iniciar o codio
     public void Initialize(GameObject objectToPool, int poolSize = 10)
     {
         this.ObjectToPool = objectToPool;
         this.poolSize = poolSize;
     }
 
+    //verifica se tem menos objetos que o limite permitido para nao lagar
+    //e spawna o objeto
     public GameObject CreateObject()
     {
         CreateObjectParentIfNeed();
@@ -51,6 +55,7 @@ public class ObjectPool : MonoBehaviour
         return spawnedObject;
     }
 
+    //cria um gameobject para armazenar esses objetos se ele nao existe
     private void CreateObjectParentIfNeed()
     {
         if (spawnedObjectsParent == null)
@@ -68,7 +73,8 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
-    private void OnDestroy() 
+    //destroi objeto antigo se estiver no limite
+    private void OnDestroy()
     {
         foreach (var item in objectPool)
         {
@@ -78,7 +84,7 @@ public class ObjectPool : MonoBehaviour
                 Destroy(item);
             else
                 item.GetComponent<DestryIfDisable>().SelfDestructionEnable = true;
-            
+
         }
     }
 }

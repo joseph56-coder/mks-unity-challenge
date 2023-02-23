@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DefaultEnemyAI : MonoBehaviour
 {
+    //instanciando objeto
     [SerializeField]
     private AIBehaviour shootBehaviour, patrolBehavior;
     [SerializeField]
@@ -11,12 +12,14 @@ public class DefaultEnemyAI : MonoBehaviour
     [SerializeField]
     private AIDetector detector;
 
-    private void Awake() {
+    private void Awake()
+    {
         detector = GetComponentInChildren<AIDetector>();
         boat = GetComponentInChildren<Boat_Controller>();
     }
 
-    private void Update() 
+    //verifica se o player e visivel para ativar ou o modo ataque ou fazer patrulha
+    private void Update()
     {
         if (detector.TargetVisiible)
         {
